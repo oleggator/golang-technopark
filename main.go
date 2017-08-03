@@ -27,6 +27,8 @@ func main() {
 		return
 	}
 
+	defer file.Close()
+
 	linesCount, err := CountLinesInFile(file)
 	if err != nil {
 		fmt.Println(err)
