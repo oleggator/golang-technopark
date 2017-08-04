@@ -15,7 +15,7 @@ const (
 func main() {
 	if len(os.Args) != 2 {
 		executableName := os.Args[0]
-		fmt.Println("usage: " + executableName + " [FILE]")
+		fmt.Println("usage:", executableName, "[FILE]")
 		return
 	}
 
@@ -35,7 +35,7 @@ func main() {
 		return
 	}
 
-	fmt.Println(linesCount)
+	fmt.Println(linesCount, filePath)
 }
 
 func CountLinesInFile(source io.Reader) (int, error) {
